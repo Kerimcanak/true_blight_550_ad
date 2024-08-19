@@ -10,33 +10,37 @@ print("*crow sound*")
 time.sleep(1)
 print("You wake up next to a river, it seems like no one is around except for you and your horse.")
 time.sleep(1)
-print("a man approaches you, 'Who are you, what god do you beleive in?', he is a fat man with a bushy moustache. What will you respond?")
-religion_selection = input("A: 'I worship Wudanaz, my sir.' B: 'I am a Christian, worshipper of Jesus.' C: 'I am one with nature.' >> ")
-if religion_selection.lower() == "a":
-    print("'I worship Wudanaz, my sir.'")
-elif religion_selection.lower() == "b":
-    print("'I am a Christian, worshipper of Jesus.'")
-elif religion_selection.lower() == "c":
-    print("'I am one with nature.'")
-    from Characters.genderlessplayer.player import player_stats
-    print(player_stats)
-    time.sleep(1)
-    print("The mman asks 'Hmm, so you are one of those pagans, poor you. What is your name then?")
-else:
-    print("Invalid input. Game over.")
-    exit()
 name = input("Name: ")
 player_stats["name"] = name
-print(player_stats)
-if player_stats["religion"] == "pagan":
-    print("Man says: 'Interesting one! Perhaps we can work it out, one day you can get baptised and saved. Good luck, my boy. Now I know you, you can go but follow me if you wanna survive.'")
-elif player_stats["religion"] == "christian":
-    print("Man says: 'Interesting one! Perhaps we can work it out my brother in Christ, you are saved in eyes of God. Good luck, my boy. I almost thought you were hostile. Follow me if you wanna survive.'")
-tutorial_selection = input("Would you like to play the tutorial? (y/n) >> ")
-if tutorial_selection.lower() == "y":
-    print("Tutorial")
-elif tutorial_selection.lower() == "n":
-    print("No tutorial")
+print(f"{name}! You are still alive! Thank Wudanaz! Now I know I am safe, let’s go buddy, c’mon.")
+time.sleep(1)
+print("A figure appears on your back, a man in red Roman robes holding a sword, slightly fat with a mustache:")
+time.sleep(1)
+print("'Who are you, stranger? Why are you in our village?'")
+time.sleep(1)
+print(f"{name}! I am {name}! I am of Heruli tribe.")
+time.sleep(1)
+religion_selection = input("A: 'I am a man.' B: 'I am a woman.' C: 'I am one with nature.' >> ")
+if religion_selection.lower() == "a":
+    time.sleep(1)
+    print("'A warrior? Then, your fate is determined.'")
+    time.sleep(1)
+    player_stats["weapon"] = "Sword"
+    player_stats["profession"] = "Warrior"
+elif religion_selection.lower() == "b":
+    time.sleep(1)
+    print("'A shield-bearer? May love protect you.'")
+    time.sleep(1)
+    player_stats["weapon"] = "Shield"
+    player_stats["profession"] = "Shield-bearer"
+elif religion_selection.lower() == "c":
+    time.sleep(1)
+    print("'A shaman? Then, you already know it.'")
+    time.sleep(1)
+    player_stats["weapon"] = "Feathered Spear"
+    player_stats["profession"] = "Shaman"
 else:
     print("Invalid input. Game over.")
     exit()
+time.sleep(1)
+print(player_stats)
