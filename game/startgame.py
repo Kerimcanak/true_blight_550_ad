@@ -1,6 +1,6 @@
 import time
 
-print("You are praying to the holy rider, Wudanaz, as you run away from the Huns...")
+print("You are praying to the ancestral spirit, Wudanaz, as you run away from the Huns...")
 time.sleep(1)
 print("And then you ride your horse as whistling arrows follow you.")
 time.sleep(1)
