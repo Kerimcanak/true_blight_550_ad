@@ -1,7 +1,7 @@
-player_genderless_stats = {
+player_stats = {
     "name": "",
     "gender": None,
-    "religion": "Pagan",
+    "religion": "pagan",
     "amulet": "Wildlife Amulet",
     "hp": 100,
     "max_hp": 100,
